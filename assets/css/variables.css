@@ -1,0 +1,20 @@
+/* variables.css — design tokens */
+:root {
+  --cream: #fff1d0;
+  --choco: #4a2318;
+  --mustard: #f6d86b;
+  --pink: #f5a3c7;
+  --white: #fffbf1;
+
+  --font-heading: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --border: 3px solid var(--choco);
+  --radius: 14px;
+  --shadow: 6px 6px 0 var(--choco);
+  --shadow-sm: 4px 4px 0 var(--choco);
+  --shadow-hover: 2px 2px 0 var(--choco);
+
+  --container: 1160px;
+  --nav-h: 76px;
+}

@@ -1,0 +1,39 @@
+/* navbar.css — desktop navbar */
+.navbar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--cream);
+  border-bottom: var(--border);
+}
+.nav-inner {
+  max-width: var(--container); margin: 0 auto; padding: 0 24px;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--choco); }
+.nav-logo-mark {
+  width: 44px; height: 44px; display: grid; place-items: center;
+  background: var(--pink); border: var(--border); border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--choco);
+  font: 700 18px var(--font-heading);
+}
+.nav-logo-text { font: 700 22px/1 var(--font-heading); letter-spacing: .02em; }
+.nav-logo-text small { display: block; font: 600 11px var(--font-body); letter-spacing: 0; opacity: .75; }
+
+.nav-menu { display: flex; align-items: center; gap: 20px; list-style: none; margin: 0; padding: 0; }
+.nav-menu a.nav-link {
+  color: var(--choco); text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 6px 4px; background: linear-gradient(var(--mustard), var(--mustard)) 0 100% / 0 40% no-repeat;
+  transition: background-size .2s;
+}
+.nav-menu a.nav-link:hover { background-size: 100% 40%; }
+
+.nav-cta {
+  background: var(--pink); color: var(--choco); text-decoration: none;
+  font: 700 16px var(--font-body); padding: 10px 20px;
+  border: var(--border); border-radius: 999px; box-shadow: var(--shadow-sm);
+  transition: transform .15s, box-shadow .15s;
+}
+.nav-cta:hover { transform: translate(2px, 2px); box-shadow: var(--shadow-hover); }
+
+.nav-toggle { display: none; } /* hanya tampil di mobile (responsive.css) */
+.nav-menu a.nav-link[aria-current="page"] { background-size: 100% 40%; }

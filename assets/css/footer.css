@@ -1,0 +1,66 @@
+/* footer.css — desktop footer */
+.footer {
+  background: var(--choco);
+  color: var(--cream);
+  border-top: var(--border);
+}
+.footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.2fr;
+  gap: 40px;
+}
+.footer h3 {
+  font: 700 24px var(--font-heading);
+  color: var(--mustard);
+  margin: 0 0 14px;
+}
+.footer p {
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.footer a {
+  color: var(--cream);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer a:hover {
+  color: var(--pink);
+}
+.footer-brand .footer-name {
+  font: 700 34px/1.05 var(--font-heading);
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.footer-social a {
+  padding: 8px 14px;
+  border: 2px solid var(--cream);
+  border-radius: 999px;
+  font-size: 14px;
+}
+.footer-social a:hover {
+  background: var(--pink);
+  color: var(--choco);
+  border-color: var(--pink);
+}
+.footer-bottom {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 20px 24px 28px;
+  border-top: 2px dashed rgba(255, 241, 208, 0.35);
+  font-size: 14px;
+}

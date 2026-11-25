@@ -1,0 +1,247 @@
+/* responsive.css — SELURUH @media query (tablet & mobile) */
+
+/* ---------- Tablet (<= 1024px) ---------- */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 88px;
+  }
+  .hero-grid {
+    gap: 40px;
+  }
+  .section-title {
+    font-size: 48px;
+  }
+  .stat-grid,
+  .program-grid,
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .steps {
+    row-gap: 44px;
+  }
+  .fasilitas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* Navbar + hamburger */
+  .nav-toggle {
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    padding: 0;
+    background: var(--mustard);
+    border: var(--border);
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 var(--choco);
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: var(--choco);
+    border-radius: 2px;
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle[aria-expanded='true'] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--cream);
+    border-bottom: var(--border);
+    padding: 8px 24px 20px;
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .nav-menu li {
+    border-bottom: 2px dashed rgba(74, 35, 24, 0.25);
+  }
+  .nav-menu a.nav-link {
+    display: block;
+    padding: 14px 0;
+  }
+  .nav-menu li:last-child {
+    border: 0;
+    padding-top: 16px;
+  }
+  .nav-cta {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* ---------- Mobile (<= 768px) ---------- */
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 68px;
+  }
+  body {
+    font-size: 16px;
+  }
+  .section {
+    padding: 64px 0;
+  }
+  .section-title {
+    font-size: 40px;
+  }
+
+  /* Hero & video 16:9 */
+  .hero {
+    padding: 40px 0 64px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 64px;
+  }
+  .hero-lead {
+    font-size: 17px;
+  }
+  .video-ratio {
+    transform: none;
+    box-shadow:
+      6px 6px 0 var(--pink),
+      6px 6px 0 3px var(--choco);
+  }
+  .video-sticker {
+    left: 8px;
+    bottom: -18px;
+    font-size: 17px;
+  }
+  .hero-actions .btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  /* Grid card */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .stat-num {
+    font-size: 48px;
+  }
+  .cta-card h2 {
+    font-size: 44px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 44px;
+  }
+}
+
+/* ---------- HP kecil (<= 480px) ---------- */
+@media (max-width: 480px) {
+  .container,
+  .nav-inner,
+  .footer-inner,
+  .footer-bottom {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+  .stat-grid,
+  .program-grid,
+  .steps,
+  .fasilitas-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-grid {
+    gap: 16px;
+  }
+  .nav-logo-text small {
+    display: none;
+  }
+  .card {
+    padding: 20px;
+  }
+}
+
+/* ---------- Halaman dalam ---------- */
+@media (max-width: 1024px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .page-header h1 {
+    font-size: 72px;
+  }
+}
+@media (max-width: 768px) {
+  .page-header {
+    padding: 44px 0;
+  }
+  .page-header h1 {
+    font-size: 52px;
+  }
+  .page-header p {
+    font-size: 17px;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .card h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .page-header h1 {
+    font-size: 44px;
+  }
+}
+
+/* ---------- Galeri: filter & lightbox ---------- */
+@media (max-width: 480px) {
+  .filters {
+    gap: 8px;
+  }
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+  .lightbox {
+    padding: 12px;
+  }
+  .lb-media {
+    font-size: 80px;
+  }
+  .lb-caption {
+    font-size: 20px;
+  }
+}
